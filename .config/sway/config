@@ -66,11 +66,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 font Comic Code Regular 11
-set $cursor_theme Adwaita
-set $cursor_size 24
-seat seat0 xcursor_theme $cursor_theme $cursor_size
-exec gsettings set org.gnome.desktop.interface cursor-theme $cursor_theme
-exec gsettings set org.gnome.desktop.interface cursor-size $cursor_size
+seat seat0 xcursor_theme Adwaita 24
 
 bar
 {
