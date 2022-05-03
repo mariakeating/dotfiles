@@ -8,3 +8,6 @@ bindsym $mod+less move workspace to output left
 
 bindsym $mod+z output DP-1 scale 2
 bindsym $mod+Shift+z output DP-1 scale 1
+
+workspace 9 output HDMI-A-1
+workspace 10 output HDMI-A-1
