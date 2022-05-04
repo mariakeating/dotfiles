@@ -7,6 +7,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
+bindsym Print exec wl-copy < $(grimshot --notify save area)
+bindsym Print+Shift exec wl-copy < $(grimshot --notify save window)
+
 set $left h
 set $down j
 set $up k
