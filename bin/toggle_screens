@@ -1,0 +1,5 @@
+#!/bin/sh
+
+for output in $(swaymsg -r -t get_outputs | jq -r '. [] | .name'); do
+    swaymsg output "$output" dpms toggle
+done
