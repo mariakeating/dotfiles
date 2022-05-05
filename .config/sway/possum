@@ -1,7 +1,11 @@
 output DP-1 scale 2
 output HDMI-A-1 transform 90 subpixel vbgr
 
-input type:pointer accel_profile flat pointer_accel 0
+input type:pointer
+{
+    accel_profile flat
+    pointer_accel 0
+}
 
 bindsym $mod+greater move workspace to output right
 bindsym $mod+less move workspace to output left
