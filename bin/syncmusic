@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync -avhtP "$HOME/music" mouse.lan:/mnt/usb/

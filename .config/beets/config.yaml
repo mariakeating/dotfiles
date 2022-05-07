@@ -1,0 +1,20 @@
+directory: ~/music
+
+plugins: fetchart convert
+
+import:
+    languages: en
+
+fetchart:
+    sources:
+        - coverart: releasegroup
+        - filesystem
+
+convert:
+    auto: yes
+    embed: no
+    format: opus
+    formats:
+        opus:
+            command: ffmpeg -i $source -y -c:a libopus -b:a 192K $dest
+            extension: opus
