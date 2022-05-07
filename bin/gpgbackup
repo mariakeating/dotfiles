@@ -1,0 +1,13 @@
+#!/bin/sh
+BACKUP_DATE=$(date +"%Y-%m-%d")
+TEMP_DIR=$(mktemp -d)
+
+pushd "$TEMP_DIR"
+gpg --export --armor maria@mariakeating.com > maria@mariakeating.com.pub.gpg
+gpg --export-secret-keys --armor maria@mariakeating.com > maria@mariakeating.com.priv.gpg
+gpg --export-secret-subkeys --armor maria@mariakeating.com > maria@mariakeating.com.sub_priv.gpg
+gpg --export-ownertrust > ownertrust.txt
+popd
+
+tar -C "$TEMP_DIR" -cvJf "gpg-backup-${BACKUP_DATE}.tar.xz" .
+rm -r "$TEMP_DIR"
