@@ -8,10 +8,6 @@ export SDL_VIDEODRIVER=wayland
 # only conformant applications will default to ~/.config if unset.
 # this isn't fun. i want to just set these as environment variables.
 # it's really annoying that these are in multiple places now.
-export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
-
 echo XDG_DESKTOP_DIR=\"\$HOME\" > "$XDG_CONFIG_HOME/user-dirs.dirs"
 echo XDG_DOCUMENTS_DIR=\"\$HOME/documents\" >> "$XDG_CONFIG_HOME/user-dirs.dirs"
 echo XDG_DOWNLOAD_DIR=\"\$HOME/downloads\" >> "$XDG_CONFIG_HOME/user-dirs.dirs"
@@ -29,15 +25,5 @@ then
 fi
 
 export XDG_SCREENSHOTS_DIR="$XDG_PICTURES_DIR/screenshots"
-
-if [ -z "$XDG_RUNTIME_DIR" ]
-then
-    export XDG_RUNTIME_DIR=/tmp/runtime/maria
-    if [ ! -d "$XDG_RUNTIME_DIR" ]
-    then
-        mkdir -p "$XDG_RUNTIME_DIR"
-        chmod 0700 "$XDG_RUNTIME_DIR"
-    fi
-fi
 
 exec dbus-run-session sway
