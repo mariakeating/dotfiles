@@ -8,7 +8,9 @@ export SDL_VIDEODRIVER=wayland
 # only conformant applications will default to ~/.config if unset.
 # this isn't fun. i want to just set these as environment variables.
 # it's really annoying that these are in multiple places now.
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 
 echo XDG_DESKTOP_DIR=\"\$HOME\" > "$XDG_CONFIG_HOME/user-dirs.dirs"
 echo XDG_DOCUMENTS_DIR=\"\$HOME/documents\" >> "$XDG_CONFIG_HOME/user-dirs.dirs"
