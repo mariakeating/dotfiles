@@ -1,4 +1,4 @@
-output DP-1 scale 2
+output DP-1 scale 2 subpixel rgb
 output HDMI-A-1 transform 90 subpixel vbgr
 
 input type:pointer
