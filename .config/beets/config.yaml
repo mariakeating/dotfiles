@@ -7,8 +7,9 @@ import:
 
 fetchart:
     sources:
-        - coverart: releasegroup
         - filesystem
+        - coverart: releasegroup
+        - coverart: release
 
 convert:
     auto: yes
