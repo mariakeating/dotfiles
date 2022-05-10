@@ -1,5 +1,5 @@
-output DP-1 scale 2 subpixel rgb
-output HDMI-A-1 transform 90 subpixel vbgr
+output DP-1 scale 2 subpixel rgb pos 0 0
+output HDMI-A-1 transform 90 subpixel vbgr pos 1920 0
 
 input type:pointer
 {
@@ -15,3 +15,5 @@ bindsym $mod+Shift+z output DP-1 scale 1
 
 workspace 9 output HDMI-A-1
 workspace 10 output HDMI-A-1
+
+for_window [app_id="pinentry-qt$"] floating enable
