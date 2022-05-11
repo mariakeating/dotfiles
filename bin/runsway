@@ -25,5 +25,6 @@ then
 fi
 
 export XDG_SCREENSHOTS_DIR="$XDG_PICTURES_DIR/screenshots"
+export XDG_CURRENT_DESKTOP=sway
 
 exec dbus-run-session sway
