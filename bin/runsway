@@ -2,6 +2,7 @@
 
 export TERM=foot
 export SDL_VIDEODRIVER=wayland
+export OBS_VKCAPTURE=1
 
 # some applications need user-dirs.dirs and some require environment
 # variables. what a total mess. XDG_CONFIG_DIR isn't even set and
