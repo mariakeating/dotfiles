@@ -10,7 +10,7 @@ fi
 
 if [[ -n $WAYLAND_DISPLAY ]]; then
 	#dmenu=dmenu-wl
-	dmenu="bemenu -m $(swaymsg -r -t get_outputs | jq -r '. [] | select (.focused == true) | .name')"
+	dmenu=bemenu
 	xdotool="ydotool type --file -"
 elif [[ -n $DISPLAY ]]; then
 	dmenu=dmenu
@@ -25,8 +25,7 @@ password_files=( "$prefix"/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
-#password=$(printf '%s\n' "${password_files[@]}" | "$dmenu" "$@")
-password=$(printf '%s\n' "${password_files[@]}" | $dmenu "$@")
+password=$(printf '%s\n' "${password_files[@]}" | "$dmenu" "$@")
 
 [[ -n $password ]] || exit
 
