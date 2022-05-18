@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/bemenu -m $(swaymsg -r -t get_outputs | jq -r '. [] | select (.focused == true) | .name') "$@"

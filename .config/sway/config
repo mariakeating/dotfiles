@@ -1,8 +1,9 @@
 set $mod Mod4
 
 bindsym $mod+Return exec foot
-bindsym $mod+d exec bemenu-run -m $(swaymsg -r -t get_outputs | jq -r '. [] | select (.focused == true) | .name') --no-exec | xargs swaymsg exec --
+bindsym $mod+d exec bemenu-run
 bindsym $mod+p exec passmenu
+bindsym $mod+m exec viewman
 
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
