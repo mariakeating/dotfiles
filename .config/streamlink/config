@@ -1,0 +1,5 @@
+player=mpv --cache=yes --demuxer-max-bytes=2048k --demuxer-max-back-bytes=1G
+player-no-close
+default-stream best
+twitch-disable-ads
+# twitch-low-latency
