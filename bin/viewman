@@ -1,2 +1,2 @@
 #!/bin/sh
-exec man -k . | bemenu -l 20 | awk '{print substr($2,2,length($2)-2) " " $1}' | xargs -r man -Tpdf | fionread zathura -
+exec man -k . | bemenu -l 20 | awk '{print $1 "." substr($2,2,length($2)-2)}' | xargs -I{} -r foot -T"Man: {}" man {}
