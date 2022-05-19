@@ -1,0 +1,2 @@
+#!/bin/sh
+exec sws.sh --dmenu-cmd "bemenu -i -l 30" --format "%T"
