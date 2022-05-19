@@ -1,0 +1,2 @@
+#!/bin/sh
+exec /usr/bin/bemenu --fn "Comic Code 11" "$@"
