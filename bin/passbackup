@@ -1,0 +1,4 @@
+#!/bin/sh
+BACKUP_DATE=$(date +"%Y-%m-%d")
+
+tar -C "$HOME/.password-store" -cvJf "pass-backup-${BACKUP_DATE}.tar.xz" .
