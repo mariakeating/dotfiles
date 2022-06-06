@@ -73,7 +73,7 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
-workspace_layout tabbed
+# workspace_layout tabbed
 
 mode "resize" {
     bindsym $left resize shrink width 10px
@@ -103,8 +103,32 @@ bar
      }
 }
 
-include /etc/sway/config.d/*
-include ~/.config/sway/`hostname`
+output DP-1 scale 1 subpixel rgb pos 0 0 mode 2560x1440@179.960Hz adaptive_sync off
+output HDMI-A-1 transform 90 subpixel vbgr
+
+input type:pointer
+{
+    accel_profile flat
+    pointer_accel 0
+}
+
+bindsym $mod+greater move workspace to output right
+bindsym $mod+less move workspace to output left
+
+bindsym $mod+z output DP-1 scale 2
+bindsym $mod+Shift+z output DP-1 scale 1
+
+workspace 7 output HDMI-A-1
+workspace 8 output HDMI-A-1
+workspace 9 output HDMI-A-1
+workspace 10 output HDMI-A-1
+
+for_window [app_id="pinentry-qt$"] floating enable
+
+assign [app_id="^foot$" title="^aerc$"] 7
+assign [class="discord"] 8
+assign [class="^Steam$"] 9
+assign [app_id="qBittorrent$" title="^qBittorrent"] 10
 
 exec --no-startup-id dbus-update-activation-environment --all
 exec startup

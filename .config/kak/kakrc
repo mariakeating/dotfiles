@@ -1,3 +1,0 @@
-set global ui_options terminal_assistant=cat
-add-highlighter global/ number-lines -relative -hlcursor
-colorscheme palenight

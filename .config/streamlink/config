@@ -3,3 +3,4 @@ player-no-close
 default-stream best
 twitch-disable-ads
 # twitch-low-latency
+title {author} - {title}

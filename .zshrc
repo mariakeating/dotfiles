@@ -8,7 +8,9 @@ function preexec {
     print -Pn "\e]0;${(q)1}\e\\"
 }
 
-PS1="$(prompt) $ "
+setopt PROMPT_SUBST
+PS1='$(prompt) $ '
+
 export GPG_TTY="$(tty)"
 
 alias ls='ls --color=auto'

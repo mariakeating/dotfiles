@@ -1,2 +1,2 @@
 #!/bin/sh
-find /mnt/pool/torrents/ -type f | bemenu -i -l 30 | xargs -I {} mpv "{}"
+find /mnt/pool/torrents/ -type f | bemenu -i -l 30 | xargs -I {} xdg-open "{}"
