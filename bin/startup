@@ -1,0 +1,9 @@
+#!/bin/sh
+
+swaymsg exec "gentoo-pipewire-launcher"
+swaymsg exec "mako --output=DP-1"
+
+swaymsg exec "foot -T aerc aerc"
+swaymsg exec discord
+swaymsg exec steam
+swaymsg exec qbittorrent
