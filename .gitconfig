@@ -3,5 +3,3 @@
 	name = Maria Keating
 [init]
 	defaultBranch = main
-[alias]
-    tree = "!git ls-tree --full-tree --name-only -r HEAD | tree -C --fromfile . | ${PAGER:-less}"

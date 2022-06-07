@@ -15,3 +15,5 @@ export GPG_TTY="$(tty)"
 
 alias ls='ls --color=auto'
 alias grep='grep --colour=auto'
+
+alias gitree='git ls-tree --full-tree --name-only -r HEAD | tree -C --fromfile . | ${PAGER:-less}'
